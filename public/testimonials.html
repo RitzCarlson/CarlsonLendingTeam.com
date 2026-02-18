@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Testimonials - The Carlson Lending Team</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#284B63",
+                        "primary-dark": "#1d3647",
+                        "accent": "#ffb703",
+                        "stone-light": "#e7e5e4",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+    <script defer>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                setTimeout(() => {
+                    menu.classList.remove('opacity-0', '-translate-y-4');
+                }, 10);
+            } else {
+                menu.classList.add('opacity-0', '-translate-y-4');
+                setTimeout(() => {
+                    menu.classList.add('hidden');
+                }, 300);
+            }
+        }
+    </script>
+</head>
+
+<body class="min-h-screen flex flex-col bg-[var(--background-light)] dark:bg-[var(--background-dark)]">
+
+    <!-- Header -->
+    <header
+        class="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/95 backdrop-blur-md border-b border-stone-light/50 shadow-sm transition-all duration-300">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 hover:opacity-90 transition-opacity">
+                <div
+                    class="w-9 h-9 bg-[var(--primary)] rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-md">
+                    C
+                </div>
+                <h1 class="text-[var(--primary)] dark:text-white font-bold text-lg leading-tight tracking-tight">
+                    The Carlson<br />Lending Team
+                </h1>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex gap-8 items-center">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="testimonials.html" class="nav-link text-[var(--primary)] font-semibold">Testimonials</a>
+                <a href="tel:858-729-4688"
+                    class="bg-[#ffb703] hover:bg-[#e0a100] text-[var(--primary)] px-5 py-2 rounded-full font-bold transition-colors shadow-md text-sm">
+                    Call 858-729-4688
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button onclick="toggleMenu()"
+                class="md:hidden text-gray-600 dark:text-gray-300 p-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu"
+            class="hidden absolute top-full left-0 w-full bg-white dark:bg-gray-900 border-b border-stone-light shadow-xl opacity-0 -translate-y-4 md:hidden">
+            <div class="flex flex-col p-4 space-y-4">
+                <a href="index.html"
+                    class="px-4 py-2 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg block transition-colors dark:text-gray-200">Home</a>
+                <a href="about.html"
+                    class="px-4 py-2 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg block transition-colors dark:text-gray-200">About
+                    Us</a>
+                <a href="testimonials.html"
+                    class="px-4 py-2 bg-[var(--primary)]/10 text-[var(--primary)] font-bold rounded-lg block">Testimonials</a>
+                <div class="h-px bg-gray-100 dark:bg-gray-800 my-2"></div>
+                <a href="tel:858-729-4688"
+                    class="flex items-center justify-center gap-2 bg-[var(--accent)] text-[var(--primary)] py-3 rounded-lg font-bold">
+                    <span class="material-symbols-outlined">call</span>
+                    Call Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main
+        class="flex-grow w-full max-w-4xl mx-auto bg-white dark:bg-gray-900 shadow-xl flex flex-col my-4 md:rounded-2xl overflow-hidden animate-fade-in ring-1 ring-black/5">
+
+        <!-- Hero Section -->
+        <section class="bg-stone-light/30 dark:bg-gray-800 px-6 pt-12 pb-16">
+            <div class="text-center">
+                <span
+                    class="inline-block py-1.5 px-4 rounded-full bg-[var(--primary)]/10 text-[var(--primary)] dark:text-blue-300 text-[11px] font-bold uppercase tracking-[0.2em] mb-6">
+                    Success Stories
+                </span>
+                <h1
+                    class="text-4xl md:text-5xl font-extrabold text-[var(--primary)] dark:text-white mb-6 leading-tight tracking-tight">
+                    What Our Clients Say
+                </h1>
+                <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed max-w-md mx-auto font-medium">
+                    We couldn't be prouder to have so many kind words from our clients!
+                </p>
+            </div>
+        </section>
+
+        <!-- Testimonials Grid -->
+        <section class="px-6 md:px-12 py-10 space-y-6 bg-white dark:bg-gray-900">
+
+            <!-- Testimonial 1 -->
+            <div class="glass-panel p-8 rounded-2xl transition-all hover-lift group">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="h-12 w-12 rounded-full bg-[var(--primary)]/10 flex items-center justify-center text-[var(--primary)] font-bold text-sm ring-2 ring-[var(--primary)]/20">
+                            SM
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 dark:text-white text-lg">Sarah Mitchell</h3>
+                            <p class="text-[11px] text-gray-500 uppercase tracking-wide font-semibold">Refinance •
+                                October 2023</p>
+                        </div>
+                    </div>
+                    <div class="flex text-[var(--accent)]">
+                        <span class="material-symbols-outlined text-[20px]"
+                            style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined text-[20px]"
+                            style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined text-[20px]"
+                            style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined text-[20px]"
+                            style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined text-[20px]"
+                            style="font-variation-settings: 'FILL' 1;">star</span>
+                    </div>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed italic">
+                    "The Carlson Team made our refinance effortless. I was worried about the paperwork, but their
+                    digital portal made everything simple. Highly recommended!"
+                </p>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="glass-panel p-8 rounded-2xl transition-all hover-lift group">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="flex items-center gap-4">
+                        <div class="h-12 w-12 rounded-full bg-gray-200 overflow-hidden ring-2 ring-gray-100">
+                            <img alt="David Chen" class="w-full h-full object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBV4eOxzWfkWUzIylmsEvm_grjs0Q2HmgXetrEBjGFvd2MK4oaNUC9mPgtDjoH8_xToCAhRLhnNHIhfEWP0DPAgjsbYMnjRBqVBJV32O9aA2dxO1_VkyLkomEbR-RzPYwxupeljRVbwbPyzoxyCgV7l-cQF9n0RNqnPt8qS8TK-Do44_CXTj0xqTfASkIkWM7GInbcPS9Ih7FAvHVfBSv3pNMEoQDNBZkTSc35A8UKJmYpwDu3acNewklIfwb1lCTaVvHPhYyjl4bo" />
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 dark:text-white text-lg">David Chen</h3>
+                            <p class="text-[11px] text-gray-500 uppercase tracking-wide font-semibold">First-Time Buyer
+                                • Sept 2023</p>
+                        </div>
+                    </div>
+                    <div class="flex text-[var(--accent)]">
+                        <span class="material-symbols-outlined text-[20px]"
+                            style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined text-[20px]"
+                            style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined text-[20px]"
+                            style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined text-[20px]"
+                            style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined text-[20px]"
+                            style="font-variation-settings: 'FILL' 1;">star</span>
+                    </div>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed italic">
+                    "As first-time buyers, we were nervous, but the team walked us through every step. We got a great
+                    rate and closed on time!"
+                </p>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="glass-panel p-8 rounded-2xl transition-all hover-lift group">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="h-12 w-12 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-700 font-bold text-sm ring-2 ring-indigo-50">
+                            JR
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 dark:text-white text-lg">Jessica Reynolds</h3>
+                            <p class="text-[11px] text-gray-500 uppercase tracking-wide font-semibold">Investment • Aug
+                                2023</p>
+                        </div>
+                    </div>
+                    <div class="flex text-[var(--accent)]">
+                        <span class="material-symbols-outlined text-[20px]"
+                            style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined text-[20px]"
+                            style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined text-[20px]"
+                            style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined text-[20px]"
+                            style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined text-[20px]"
+                            style="font-variation-settings: 'FILL' 1;">star</span>
+                    </div>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed italic">
+                    "Professional, fast, and communicative. The best lending experience I've had in 15 years of real
+                    estate investing."
+                </p>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="glass-panel p-8 rounded-2xl transition-all hover-lift group">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="flex items-center gap-4">
+                        <div class="h-12 w-12 rounded-full bg-gray-200 overflow-hidden ring-2 ring-gray-100">
+                            <img alt="Maria Rodriguez" class="w-full h-full object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLHnU2i-ffZJnaCdw89NL4wX-QHm7qUQvkIrV6dA02XQ1QUrC4uyY5BvprUn0WkVTrmpvddZKxYctbu1obTs_FO8lwJDAEWpyy_dgbVV_1wwM2DXiVR-nqWV9b2auBQ36Sa0Ga0z8mrV_pTWngrdkVqyuI6fGun36orYAqiJ2wRV8PLQWmnUGRnTtfXANsUDCj2E6CuEUejDzAIAvGgr2WmYL8CVJMZuwrbnepVI22Ijvg5JWi8ENZoQVAlplm3GhSQjVGPai3NH0" />
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 dark:text-white text-lg">Maria Rodriguez</h3>
+                            <p class="text-[11px] text-gray-500 uppercase tracking-wide font-semibold">Home Purchase •
+                                July 2023</p>
+                        </div>
+                    </div>
+                    <div class="flex text-[var(--accent)]">
+                        <span class="material-symbols-outlined text-[20px]"
+                            style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined text-[20px]"
+                            style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined text-[20px]"
+                            style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined text-[20px]"
+                            style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined text-[20px]"
+                            style="font-variation-settings: 'FILL' 1;">star</span>
+                    </div>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed italic">
+                    "They really went to bat for us when there were issues with the appraisal. True professionals who
+                    care about their clients."
+                </p>
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-[#284B63] text-white pt-16 pb-8 px-6 mt-auto">
+            <div class="flex flex-col items-center text-center">
+                <div class="space-y-4 mb-10">
+                    <p class="font-bold text-2xl text-white tracking-tight">The Carlson Lending Team</p>
+                    <p class="text-sm text-blue-50/80 leading-relaxed font-light">
+                        12230 El Camino Real, Suite 100<br />
+                        San Diego, CA 92130
+                    </p>
+                    <div class="flex flex-col gap-2 text-sm text-blue-50/90 font-medium">
+                        <a class="hover:text-white hover:underline transition-all"
+                            href="mailto:Kim@CarlsonLendingTeam.com">Kim@CarlsonLendingTeam.com</a>
+                        <a class="hover:text-white hover:underline transition-all"
+                            href="tel:858-729-4688">858-729-4688</a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-4 w-full max-w-[280px] mb-10">
+                    <a class="bg-[#ffb703] hover:bg-[#e0a100] text-[var(--primary)] font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg active:scale-95 flex items-center justify-center gap-2 text-lg"
+                        href="tel:858-729-4688">
+                        <span class="material-symbols-outlined text-xl"
+                            style="font-variation-settings: 'FILL' 1;">call</span>
+                        Call 858-729-4688
+                    </a>
+                </div>
+
+                <div class="space-y-3 mb-12">
+                    <p class="text-[11px] text-blue-100/60 font-medium uppercase tracking-widest">DRE #01234567 | NMLS
+                        #891011</p>
+                    <div class="flex flex-col items-center gap-6">
+                        <div class="flex justify-center items-center gap-2 text-[11px] text-blue-100/60">
+                            <span class="material-symbols-outlined text-sm"
+                                style="font-variation-settings: 'FILL' 1;">home</span>
+                            Equal Housing Opportunity
+                        </div>
+                        <div class="opacity-50 hover:opacity-100 transition-opacity">
+                            <img src="images/LogoPackage-C2/Logo - Locked - WPNG.png" alt="Locked WPNG Logo"
+                                class="h-10 w-auto">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full border-t border-white/10 pt-8 flex flex-col items-center">
+                    <div
+                        class="flex flex-wrap justify-center gap-x-4 gap-y-2 mb-6 text-[11px] text-blue-100/50 uppercase tracking-wider font-semibold">
+                        <a class="hover:text-white transition-colors" href="#">NMLS Consumer Access</a>
+                        <span>|</span>
+                        <a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+                        <span>|</span>
+                        <a class="hover:text-white transition-colors" href="#">Site Disclaimer</a>
+                    </div>
+                    <p class="text-[11px] text-blue-100/40">© 2026 The Carlson Lending Team. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>

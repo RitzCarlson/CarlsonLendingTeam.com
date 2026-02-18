@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>The Carlson Lending Team</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#284B63",
+                        "primary-dark": "#1d3647",
+                        "accent": "#ffb703",
+                        "stone-light": "#e7e5e4",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+    <script defer>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                setTimeout(() => {
+                    menu.classList.remove('opacity-0', '-translate-y-4');
+                }, 10);
+            } else {
+                menu.classList.add('opacity-0', '-translate-y-4');
+                setTimeout(() => {
+                    menu.classList.add('hidden');
+                }, 300);
+            }
+        }
+    </script>
+</head>
+
+<body class="min-h-screen flex flex-col bg-[var(--background-light)] dark:bg-[var(--background-dark)]">
+
+    <!-- Header -->
+    <header
+        class="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/95 backdrop-blur-md border-b border-stone-light/50 shadow-sm transition-all duration-300">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 hover:opacity-90 transition-opacity">
+                <div
+                    class="w-9 h-9 bg-[var(--primary)] rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-md">
+                    C
+                </div>
+                <h1 class="text-[var(--primary)] dark:text-white font-bold text-lg leading-tight tracking-tight">
+                    The Carlson<br />Lending Team
+                </h1>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex gap-8 items-center">
+                <a href="index.html" class="nav-link text-[var(--primary)] font-semibold">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="testimonials.html" class="nav-link">Testimonials</a>
+                <a href="tel:858-729-4688"
+                    class="bg-[#ffb703] hover:bg-[#e0a100] text-[var(--primary)] px-5 py-2 rounded-full font-bold transition-colors shadow-md text-sm">
+                    Call 858-729-4688
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button onclick="toggleMenu()"
+                class="md:hidden text-gray-600 dark:text-gray-300 p-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu"
+            class="hidden absolute top-full left-0 w-full bg-white dark:bg-gray-900 border-b border-stone-light shadow-xl opacity-0 -translate-y-4 md:hidden">
+            <div class="flex flex-col p-4 space-y-4">
+                <a href="index.html"
+                    class="px-4 py-2 bg-[var(--primary)]/10 text-[var(--primary)] font-bold rounded-lg block">Home</a>
+                <a href="about.html"
+                    class="px-4 py-2 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg block transition-colors dark:text-gray-200">About
+                    Us</a>
+                <a href="testimonials.html"
+                    class="px-4 py-2 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg block transition-colors dark:text-gray-200">Testimonials</a>
+                <div class="h-px bg-gray-100 dark:bg-gray-800 my-2"></div>
+                <a href="tel:858-729-4688"
+                    class="flex items-center justify-center gap-2 bg-[var(--accent)] text-[var(--primary)] py-3 rounded-lg font-bold">
+                    <span class="material-symbols-outlined">call</span>
+                    Call Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main
+        class="flex-grow w-full max-w-4xl mx-auto bg-white dark:bg-gray-900 shadow-xl flex flex-col my-4 md:rounded-2xl overflow-hidden animate-fade-in ring-1 ring-black/5">
+
+        <!-- Hero Section -->
+        <section class="relative pt-12 pb-8 px-6 md:px-12 flex flex-col md:flex-row md:items-center gap-8">
+            <div class="z-10 md:w-1/2">
+                <h2
+                    class="text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-white leading-[1.1] mb-4 tracking-tight">
+                    Low Rates<br />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-blue-500">And
+                        Highly Rated</span>
+                </h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 font-medium mb-8 max-w-sm">
+                    Finally, you've found your lender! Experience the difference of a team that puts you first.
+                </p>
+                <div class="hidden md:block">
+                    <a href="https://135622.my1003app.com/273832/register"
+                        class="btn-primary inline-flex items-center gap-2 text-lg px-8 py-4">
+                        Apply Now!
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="relative w-full md:w-1/2 aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl hover-lift ring-1 ring-black/5">
+                <img alt="Happy family relaxing in modern living room"
+                    class="w-full h-full object-cover object-right transform hover:scale-105 transition-transform duration-700"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCS3gY4SgIbm-b75l10qUGqpolTAJhn21uhXjNqU3m2ilTOTiTxkBKJstj1_w7T9Js73VFO91VgnZhBfHJ8JMoHDA7IW8Es2UMcrj7c6uxkj5imNkO5Jchjp7d8fV4HA4yF5tGNbFsfv2nQgOadd-7tt2i5dZQlxRvTXS7RMVSIX392YvzFJ6CNnK37cpNz0__L65oNyLxfol295uKohxCp1NL_B_Jn-gCuxGhnCCzGEpCtSp8W3e7fIptgCQaU7Oyr9QxXpAGlZAY" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
+            </div>
+
+            <div class="md:hidden mt-4">
+                <a href="https://135622.my1003app.com/273832/register"
+                    class="w-full btn-primary text-xl py-4 flex justify-center">
+                    Apply Now!
+                </a>
+            </div>
+        </section>
+
+        <!-- Trust Badges -->
+        <section class="bg-[var(--primary)] text-white py-8 px-6 md:px-12 relative overflow-hidden">
+            <!-- Background Pattern -->
+            <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
+            </div>
+
+            <div class="relative flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 text-center">
+                <p class="text-xs font-bold uppercase tracking-[0.2em] opacity-80 md:w-auto w-full mb-2 md:mb-0">Trusted
+                    by Homeowners</p>
+
+                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12 w-full max-w-2xl">
+                    <div class="flex flex-col items-center group cursor-default">
+                        <span
+                            class="font-bold text-sm mb-1 group-hover:text-[var(--accent)] transition-colors">Yelp</span>
+                        <div class="flex text-[var(--accent)]">
+                            <span class="material-symbols-outlined text-[20px]"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[20px]"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[20px]"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[20px]"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[20px]"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                    </div>
+                    <div class="hidden md:block w-px h-10 bg-white/20"></div>
+                    <div class="flex flex-col items-center group cursor-default">
+                        <span
+                            class="font-bold text-sm mb-1 group-hover:text-[var(--accent)] transition-colors">Google</span>
+                        <div class="flex text-[var(--accent)]">
+                            <span class="material-symbols-outlined text-[20px]"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[20px]"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[20px]"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[20px]"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[20px]"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                    </div>
+                    <div class="hidden md:block w-px h-10 bg-white/20"></div>
+                    <div class="flex flex-col items-center group cursor-default">
+                        <span
+                            class="font-bold text-sm mb-1 group-hover:text-[var(--accent)] transition-colors">Zillow</span>
+                        <div class="flex text-[var(--accent)]">
+                            <span class="material-symbols-outlined text-[20px]"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[20px]"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[20px]"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[20px]"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[20px]"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-[#ffb703] py-12 px-6 relative overflow-hidden">
+            <div class="absolute inset-0 bg-white/10 skew-y-3 transform -origin-left scale-150"></div>
+            <div class="relative flex items-center justify-center">
+                <a href="https://135622.my1003app.com/273832/register"
+                    class="bg-[#284B63] hover:bg-[#1d3647] hover:scale-105 text-white font-extrabold text-2xl py-6 px-16 rounded-full shadow-2xl transition-all duration-300 active:scale-95 uppercase tracking-wider flex items-center gap-3">
+                    Apply Now!
+                    <span class="material-symbols-outlined text-3xl">arrow_forward</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-[#284B63] text-white pt-16 pb-8 px-6 mt-auto">
+            <div class="flex flex-col items-center text-center">
+                <div class="space-y-4 mb-10">
+                    <p class="font-bold text-2xl text-white tracking-tight">The Carlson Lending Team</p>
+                    <p class="text-sm text-blue-50/80 leading-relaxed font-light">
+                        12230 El Camino Real, Suite 100<br />
+                        San Diego, CA 92130
+                    </p>
+                    <div class="flex flex-col gap-2 text-sm text-blue-50/90 font-medium">
+                        <a class="hover:text-white hover:underline transition-all"
+                            href="mailto:Kim@CarlsonLendingTeam.com">Kim@CarlsonLendingTeam.com</a>
+                        <a class="hover:text-white hover:underline transition-all"
+                            href="tel:858-729-4688">858-729-4688</a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-4 w-full max-w-[280px] mb-10">
+                    <a class="bg-[#ffb703] hover:bg-[#e0a100] text-[var(--primary)] font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg active:scale-95 flex items-center justify-center gap-2 text-lg"
+                        href="tel:858-729-4688">
+                        <span class="material-symbols-outlined text-xl"
+                            style="font-variation-settings: 'FILL' 1;">call</span>
+                        Call 858-729-4688
+                    </a>
+                </div>
+
+                <div class="space-y-3 mb-12">
+                    <p class="text-[11px] text-blue-100/60 font-medium uppercase tracking-widest">DRE #01234567 | NMLS
+                        #891011</p>
+                    <div class="flex flex-col items-center gap-6 mb-6">
+                        <div class="flex justify-center items-center gap-2 text-[11px] text-blue-100/60">
+                            <span class="material-symbols-outlined text-sm"
+                                style="font-variation-settings: 'FILL' 1;">home</span>
+                            Equal Housing Opportunity
+                        </div>
+                        <div class="opacity-50 hover:opacity-100 transition-opacity">
+                            <img src="images/LogoPackage-C2/Logo - Locked - WPNG.png" alt="Locked WPNG Logo"
+                                class="h-10 w-auto">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full border-t border-white/10 pt-8 flex flex-col items-center">
+                    <div
+                        class="flex flex-wrap justify-center gap-x-4 gap-y-2 mb-6 text-[11px] text-blue-100/50 uppercase tracking-wider font-semibold">
+                        <a class="hover:text-white transition-colors" href="#">NMLS Consumer Access</a>
+                        <span>|</span>
+                        <a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+                        <span>|</span>
+                        <a class="hover:text-white transition-colors" href="#">Site Disclaimer</a>
+                    </div>
+                    <p class="text-[11px] text-blue-100/40">© 2026 The Carlson Lending Team. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>
